@@ -1,0 +1,76 @@
+html{
+	font-family: "Lucida Console", "Courier New", monospace;
+  color: white;
+}
+body{
+	height: 900px;
+	padding: 0px;
+	margin: 0px;
+  background: linear-gradient(rgb(48, 48, 48), black);
+  background-attachment: fixed;
+}
+p{
+  color: white;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+.borde{
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+	transition: 2s;
+  border: thick solid white; 
+  width: 1000px;
+}
+.autor{
+	margin-bottom: 40px;
+}
+header{
+	background-color: gray;
+	padding: 25px;
+	margin-bottom: 40px;
+
+}
+.boton{
+  margin: 30px 30px;
+  padding: 15px 30px;
+  color: white;
+  border: thick solid white; 
+  text-decoration: none;
+  font-size: 20px;
+  transition: 2s;
+}
+.opciones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.titulo{
+  width: 22%;
+  padding: 12px 20px;
+  margin: 20px 0;
+  display: inline-block;
+  border: 3px solid  #DB7634;
+  border-radius: 120px;
+  box-sizing: border-box;
+}
+.cuerpo{
+  width: 70%;
+  padding: 12px 20px;
+  margin: 20px 0;
+  border: 3px solid  #DB7634;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.botonesPaginas{
+  width: 1%;
+  color: white;
+  margin-right: 10px;
+  border: 1px solid white; 
+  text-decoration: none;
+  font-size: 20px;
+  transition: 2s;
+}

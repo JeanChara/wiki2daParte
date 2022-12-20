@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="icon" href="icon/UNSA.ico">
+		<link rel = "stylesheet" href = "css/estilos.css" >
+		<title> Pagina principal</title>
+		<div = style="text-align: center;">
+			<img src = "img/logoUNSA.png" width = "500" height = "227" alt = "Logo UNSA">
+			<address class="autor">
+				<p>Curso: Programacion Web 1.</p>
+				<p>Autor: Jean Carlo Chara Condori.</p>
+				<p>Aplicacion: Tarea Wikipedia.</p> 
+			</address>
+		</div>
+	</head>
+
+	<body >
+		<div class="opciones">
+			<a href="cgi-bin/list.pl"  class="boton" id="bordes1">Listados</a>
+			<a href="new.html" class="boton" id="bordes2">Nueva Pagina</a>
+		</div>
+		
+	</body>
+
+	<script>
+		setInterval(bordesAleatorios,1000);
+		function bordesAleatorios(){
+			var x = Math.floor(Math.random() * 256);
+			var y = Math.floor(Math.random() * 256);
+			var z = Math.floor(Math.random() * 256);
+			var color = "rgb(" + x + "," + y + "," + z + ")";
+			document.getElementById('bordes1').style.border = "thick solid "+color;
+			document.getElementById('bordes2').style.border= "thick solid "+color;
+			document.getElementById('bordes3').style.border = "thick solid "+color;
+		}
+	</script>
+</html>
