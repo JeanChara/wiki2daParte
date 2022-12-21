@@ -16,6 +16,12 @@ a{
   color: white;
   text-decoration: none;
 }
+nav a{
+	text-decoration: none;
+	color: white;
+	margin: 0 30px;
+
+}
 .borde{
   margin: auto;
   padding-top: 10px;

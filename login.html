@@ -2,31 +2,33 @@
 
 <html>
 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
 		<link rel="icon" href="icon/UNSA.ico">
 		<link rel = "stylesheet" href = "css/estilos.css" >
-		<title> Pagina principal</title>
-		<header>
-			<nav>
-				<a href="registro.html">Registrarse</a>
-				<a href="login.html">Loguearse</a>
-			</nav>
-		</header>
+		<title>Login</title>
 		<div = style="text-align: center;">
 			<img src = "img/logoUNSA.png" width = "500" height = "227" alt = "Logo UNSA">
 			<address class="autor">
-				<p>Curso: Programacion Web 1.</p>
 				<p>Autor: Jean Carlo Chara Condori.</p>
-				<p>Aplicacion: Tarea Wikipedia.</p> 
 			</address>
 		</div>
 	</head>
 
 	<body >
-		<div class="opciones">
-			<a href="cgi-bin/list.pl"  class="boton" id="bordes1">Listados</a>
-			<a href="new.html" class="boton" id="bordes2">Nueva Pagina</a>
+		<div style="text-align: center;">
+			<p>Registrar usuario</p><br><br>
+			<a href="paginaPrincipal.html"  class="boton" >Cancelar</a> 
+
+			<form style="margin-top: 50px;" method = "GET" action="cgi-bin/register.pl">
+				<p>Nombre de usuario</p>
+				<input class="titulo" type="text" placeholder="Usuario" name="usuario"> <br>
+				<p>Contraseña</p>
+				<input class = "titulo" type="text" placeholder="Contraseña" name="contraseña"> </textarea><br>
+				
+				<input class="boton" id ="bordes1" style="background-color: black;" type="submit" value="Enviar">
+
+			</form>
 		</div>
-		
 	</body>
 
 	<script>
@@ -37,8 +39,6 @@
 			var z = Math.floor(Math.random() * 256);
 			var color = "rgb(" + x + "," + y + "," + z + ")";
 			document.getElementById('bordes1').style.border = "thick solid "+color;
-			document.getElementById('bordes2').style.border= "thick solid "+color;
-			document.getElementById('bordes3').style.border = "thick solid "+color;
 		}
 	</script>
 </html>

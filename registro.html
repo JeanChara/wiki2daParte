@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+		<link rel="icon" href="icon/UNSA.ico">
+		<link rel = "stylesheet" href = "css/estilos.css" >
+		<title>Registro</title>
+		<div = style="text-align: center;">
+			<img src = "img/logoUNSA.png" width = "500" height = "227" alt = "Logo UNSA">
+			<address class="autor">
+				<p>Autor: Jean Carlo Chara Condori.</p>
+			</address>
+		</div>
+	</head>
+
+	<body >
+		<div style="text-align: center;">
+			<p>Registrar usuario</p><br><br>
+			<a href="paginaPrincipal.html"  class="boton" >Cancelar</a> 
+
+			<form style="margin-top: 30px;" method = "GET" action="cgi-bin/register.pl">
+				<div class = "opciones">
+					<p style = "margin-right: 305px;">Nombres</p>
+					<p>Apellidos</p>
+				</div>
+				<div class = "opciones">
+					<input style = "margin-right: 20px; "class="titulo" type="text" placeholder="Nombre" name="Nombre"> 
+					<input class="titulo" type="text" placeholder="Apellido" name="Apellido">
+				</div> <br>
+				<p>Nombre de usuario</p>
+				<input class="titulo" type="text" placeholder="Usuario" name="usuario"> <br>
+				<p>Contraseña</p>
+				<input class = "titulo" type="text" placeholder="Contraseña" name="contraseña"> </textarea><br>
+				
+				<input class="boton" id ="bordes1" style="background-color: black;" type="submit" value="Enviar">
+
+			</form>
+		</div>
+	</body>
+
+	<script>
+		setInterval(bordesAleatorios,1000);
+		function bordesAleatorios(){
+			var x = Math.floor(Math.random() * 256);
+			var y = Math.floor(Math.random() * 256);
+			var z = Math.floor(Math.random() * 256);
+			var color = "rgb(" + x + "," + y + "," + z + ")";
+			document.getElementById('bordes1').style.border = "thick solid "+color;
+		}
+	</script>
+</html>
