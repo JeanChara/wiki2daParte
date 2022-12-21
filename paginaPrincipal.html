@@ -7,8 +7,10 @@
 		<title> Pagina principal</title>
 		<header>
 			<nav>
+				<form method="GET" action="cgi-bin/list.pl">
 				<a href="registro.html">Registrarse</a>
 				<a href="login.html">Loguearse</a>
+				</form>
 			</nav>
 		</header>
 		<div = style="text-align: center;">
@@ -23,8 +25,16 @@
 
 	<body >
 		<div class="opciones">
-			<a href="cgi-bin/list.pl"  class="boton" id="bordes1">Listados</a>
+			<a href="list.html"  class="boton" id="bordes1">Listados</a>
 			<a href="new.html" class="boton" id="bordes2">Nueva Pagina</a>
+			<a href="update.html" class="boton" id="bordes3">Editar Pagina</a>
+
+		</div>
+		<div class="opciones">
+			<a href="view.html" class="boton" id="bordes4">Ver Pagina</a>
+			<a href="delete.html" class="boton" id="bordes5">Borrar Pagina</a>
+			<a href="article.html" class="boton" id="bordes6">Texto de Pagina</a>
+
 		</div>
 		
 	</body>
@@ -39,6 +49,9 @@
 			document.getElementById('bordes1').style.border = "thick solid "+color;
 			document.getElementById('bordes2').style.border= "thick solid "+color;
 			document.getElementById('bordes3').style.border = "thick solid "+color;
+			document.getElementById('bordes4').style.border = "thick solid "+color;
+			document.getElementById('bordes5').style.border= "thick solid "+color;
+			document.getElementById('bordes6').style.border = "thick solid "+color;
 		}
 	</script>
 </html>

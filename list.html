@@ -5,7 +5,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
 		<link rel="icon" href="icon/UNSA.ico">
 		<link rel = "stylesheet" href = "css/estilos.css" >
-		<title>Login</title>
+		<title>Lista de paginas</title>
 		<div = style="text-align: center;">
 			<img src = "img/logoUNSA.png" width = "500" height = "227" alt = "Logo UNSA">
 			<address class="autor">
@@ -16,16 +16,14 @@
 
 	<body >
 		<div style="text-align: center;">
-			<p>Loguear usuario</p><br><br>
+			<p>Lista de paginas</p><br><br>
 			<a href="paginaPrincipal.html"  class="boton" >Cancelar</a> 
 
-			<form style="margin-top: 50px;" method = "GET" action="cgi-bin/login.pl">
+			<form style="margin-top: 50px;" method = "GET" action="cgi-bin/list.pl">
 				<p>Nombre de usuario</p>
 				<input class="titulo" type="text" placeholder="Usuario" name="usuario"> <br>
-				<p>Contraseña</p>
-				<input class = "titulo" type="text" placeholder="Contraseña" name="contraseña"><br>
 				
-				<input class="boton" id ="bordes1" style="background-color: black;" type="submit" value="Ingresar">
+				<input class="boton" id ="bordes1" style="background-color: black;" type="submit" value="Enviar">
 
 			</form>
 		</div>
