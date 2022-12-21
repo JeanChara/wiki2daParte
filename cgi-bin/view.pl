@@ -5,32 +5,19 @@ use CGI;
 use strict;
 use warnings;
 
-print "Content-type: text/html\n\n";
-print <<HTML;
-<html>
-	<head>
-		<link rel="icon" href="../icon/UNSA.ico">
-		<link rel = "stylesheet" href = "../css/estilos.css" >
-		<title> Visualizando pagina </title>
-
-		<div class = "opciones">
-			<a href="../paginaPrincipal.html"  class="boton"> Regresar a la pagina principal </a>
-		</div>
-	</head>
-	<body>
-				
-HTML
-
 my $q = CGI->new;
+my $owner = $q->param('usuario');
 my $titulo= $q->param('titulo');
 
+# conectamos base de datos
 my $user = 'alumno';
 my $password = 'pweb1';
 my $dsn = "DBI:MariaDB:database=pweb1;host=192.168.1.5";
 my $dbh = DBI->connect($dsn, $user, $password) or die("No se pudo conectar!");;
 
-my $sth = $dbh->prepare("SELECT markdown FROM wiki WHERE nombrePag=?");
-$sth->execute($titulo);
+# consultamos por la pagina en markdown
+my $sth = $dbh->prepare("SELECT markdown FROM Articles WHERE owner=? AND title=?");
+$sth->execute($owner,$titulo);
 
 my @texto;
 while (my @row = $sth->fetchrow_array){
@@ -44,12 +31,8 @@ for (my $i=0; $i<scalar(@lineas); $i++){ #para cada linea...
 	my $lineaExpresada = matchLine($lineas[$i]);
 	$textoHTML= $textoHTML."$lineaExpresada";
 }
-
-print <<HTML;
-		$textoHTML
-	</body>
-</html>
-HTML
+print "Content-type: text/html\n\n";
+print $textoHTML;
 
 sub matchLine{
   my $linea = $_[0];
