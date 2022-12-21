@@ -28,7 +28,7 @@ if(@row == 0){
 
     # si no existe el usuario en la base de datos...
     $sth = $dbh->prepare("INSERT INTO Users(userName,password,lastName,firstName) VALUES(?,?,?,?)");
-    $sth -> execute($nombreUsuario,$contra,$nombres,$apellidos);
+    $sth -> execute($nombreUsuario,$contra,$apellidos,$nombres);
     print "<user>\n";
     print "<owner> $nombreUsuario </owner>\n";
     print "<firstName> $nombres </firstName>\n";
